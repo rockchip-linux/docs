@@ -1,0 +1,126 @@
+===========RK3326 Linux SDK Release Note===========
+
+[rk3326_linux_release_v1.20_20190916.xml change log]
+
+Buildroot(2018.02-rc3)
+1,support up to Qt 5.12.2
+2,support chromium brower
+3,weston suoport rotate and scale
+4,support x11 packages
+5,mali support x11
+6,provide a mali that has only opencl feature
+7,add a customized configuration for robot product
+8,enable ccahe to improve compile speed
+9,fix compile error on ubuntu 19.04
+10,support zstd compression algorithm for squashfs
+11,upgrade glibc to 2.29
+
+kernel
+1,upgrade to 4.4.189
+2,fix logo blink issue
+3,fix some power regulators can't turn off while suspending
+4,add a customized configuration for robot product
+
+rkisp upgrade to v2.2.0
+1,support blink light control
+2,optimize capture process
+
+rkbin
+1,ddr.bin upgrade to v1.13
+2,bl32 upgrade to v1.12
+    fix ota upgrade failure
+3,bl31 upgrade to v1.16
+    support uart0 wakeup
+    support atags
+    support boot from secondary cpu
+4,miniloder upgrade to v1.15
+
+tools
+1,Androidtool upgrade to v2.69
+
+applications
+1,remove the original gallery,video,music applications, provide the new application to replace
+2,use the new camera application, that is compatible with the usb camera, and support the differents camera switching
+3,various fix
+
+[rk3326_linux_release_v1.10_20190425.xml change log]
+
+Buildroot(2018.02-rc3)
+1,WiFi/BT compatibility support
+2,bluetooth a2dp support
+3,recovery image size optimization
+4,support secure boot
+5,fix sound playback issue for h264
+5,fix video display issue for h264
+
+document
+1,recovery guide
+2,pcba guide
+3,hdmi cec guide
+4,drm display driver development guide
+
+tools
+1,DriverAssitant upgrade to v4.8
+2,AndroidTool upgrade to v2.67
+3,FactoryTool upgrade to v1.66
+4,rename rk_provision_tool to RKDevInfoWriteTool, and upgrade to v1.0.4
+
+kernel
+1,fix rkisp interrupt storm in some scenarios
+2,fix kernel lockup after the system is resumed, it's caused by nand/sfc flash
+3,fix kernel lockup while the watchdog is enable
+4,memory log (pstore) support
+5,fix loader upgradation fail upduring ota
+6,fix powerup failure for ov5695
+7,add the support for 4k page spi nand flash:ATO25D1GA, XT26G02B, XT26G01B, HYF4GQ4UAACBE
+8,hardware crypto feature support
+
+Application
+1,fix touch event invalid scenario
+2,improve bluetooth feature
+3,mpeg4 video support
+4,fix the hangup after takephotos continuously
+5,fix the others device can't connect to AP
+6,wav and wma audio support
+
+rkbin
+1,ddr.bin upgrade to v1.11
+
+uboot
+1,add the support for NandFlash H27TDG8T2D8R
+2,support kernel compression image
+3,add the low voltage protection for PMIC rk809/rk817
+4,add the watchdog support
+5,add the MEDIA_BUS_FMT_RGB666_1X7X3_JEIDA format support for lvds display
+
+rkisp
+1,upgrade to v2.0.0
+
+libdrm
+1,switch branch to rk33/mid/9.0/Develop
+
+[rk3326_linux_release_v1.00_20190215.xml change log]
+
+buildroot
+1,add a simple configuration for robot product
+2,fixup ssh error on squashfs filesystem
+3,camera_engine_rkisp upgrade to v1.6
+4,add camera test scripts
+5,imporve audio test scripts
+
+rkbin
+1,bl32 fix a low probability system hangup
+
+u-boot
+1,enable OF_LIVE feature
+2,add a new configuration without bl32
+
+kernel
+1,support black/white camera
+2,enable rockchip pvtm feature to optimize power consumption
+3,support camera sensor:ov7750, 0v7251, ov7725
+4,rk817/rk809 codec support S32_LE
+
+document
+1,RKISP_Driver_User_Manual guide
+2,camera_engine_rkisp_user_manual guide
